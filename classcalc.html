@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Field Day 2022 Class Calculator</title>
+	<link rel="stylesheet" type="text/css" href="fd2022.css" />
+
+</head>
+<body>
+	<div id="display">
+		<div id="tocopy"></div>
+		<button id='cpy'>Copy</button>
+	</div>
+
+	<div id="parts">
+		<div id="to_class" class="active">Class</div>
+		<div id="to_section">Section</div>
+	</div>
+
+	<div id="xandc" class="active"/>
+
+		<div id="xmtrbox">
+			<h4>Transmitters</h4>
+			<input id="xmtr" type="number" value="0" />
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+				<li>10</li>
+				<li>11</li>
+				<li>12</li>
+				<li>13</li>
+				<li>14</li>
+				<li>15</li>
+				<li>16</li>
+				<li>17</li>
+				<li>18</li>
+				<li>19</li>
+				<li>20</li>
+			</ul>
+		</div>
+
+		<div id="classbox">
+			<h4>Class</h4>
+			<ul>
+				<li><span>A</span> &mdash; Club/Non-Club Portable</li>
+				<li><span>AB</span> &mdash; Club/Non-Club Portable (Battery)</li>
+				<li><span>B</span> &mdash; 1-2 Person Portable</li>
+				<li><span>BB</span> &mdash; 1-2 Person Portable (Battery)</li>
+				<li><span>C</span> &mdash; Mobile</li>
+				<li><span>D</span> &mdash; Home Station</li>
+				<li><span>E</span> &mdash; Home Station, Emergency Power</li>
+				<li><span>F</span> &mdash; Emergency Operations Center</li>
+			</ul>
+		</div>
+
+	</div>
+
+	<div id="section">
+
+		<h3>Nearby</h3>
+
+		<div>
+			<h4>U.S. Call Area 7</h4>
+			<ul>
+				<li><span>AK</span> &mdash; Alaska </li>
+				<li><span>AZ</span> &mdash; Arizona </li>
+				<li><span>EWA</span> &mdash; Eastern Washington </li>
+				<li><span>ID</span> &mdash; Idaho </li>
+				<li><span>MT</span> &mdash; Montana </li>
+				<li><span>NV</span> &mdash; Nevada </li>
+				<li><span>OR</span> &mdash; Oregon </li>
+				<li><span>UT</span> &mdash; Utah </li>
+				<li><span>WWA</span> &mdash; Western Washington </li>
+				<li><span>WY</span> &mdash; Wyoming </li>
+			</ul>
+		</div>
+
+
+		<div>
+			<h4>U.S. Call Area 6</h4>
+			<ul>
+				<li><span>EB</span> &mdash; East Bay </li>
+				<li><span>LAX</span> &mdash; Los Angeles </li>
+				<li><span>ORG</span> &mdash; Orange </li>
+				<li><span>PAC</span> &mdash; Pacific </li>
+				<li><span>SB</span> &mdash; Santa Barbara </li>
+				<li><span>SCV</span> &mdash; Santa Clara Valley </li>
+				<li><span>SDG</span> &mdash; San Diego </li>
+				<li><span>SF</span> &mdash; San Francisco </li>
+				<li><span>SJV</span> &mdash; San Joaquin Valley </li>
+				<li><span>SV</span> &mdash; Sacramento Valley </li>
+			</ul>
+		</div>
+
+		<div>
+			<h4>U.S. Call Area 0</h4>
+			<ul>
+				<li><span>CO</span> &mdash; Colorado </li>
+				<li><span>IA</span> &mdash; Iowa </li>
+				<li><span>KS</span> &mdash; Kansas </li>
+				<li><span>MN</span> &mdash; Minnesota </li>
+				<li><span>MO</span> &mdash; Missouri </li>
+				<li><span>ND</span> &mdash; North Dakota </li>
+				<li><span>NE</span> &mdash; Nebraska </li>
+				<li><span>SD</span> &mdash; South Dakota </li>
+			</ul>
+		</div>
+
+		<div>
+			<h4>Canada</h4>
+			<ul>
+				<li><span>AB</span> &mdash; Alberta </li>
+				<li><span>BC</span> &mdash; British Columbia </li>
+				<li><span>GTA</span> &mdash; Greater Toronto Area </li>
+				<li><span>MAR</span> &mdash; Maritime </li>
+				<li><span>MB</span> &mdash; Manitoba </li>
+				<li><span>NL</span> &mdash; Newfoundland and Labrador </li>
+				<li><span>NT</span> &mdash; Northern Territories </li>
+				<li><span>ONE</span> &mdash; Ontario East </li>
+				<li><span>ONN</span> &mdash; Ontario North </li>
+				<li><span>ONS</span> &mdash; Ontario South </li>
+				<li><span>PE</span> &mdash; Prince Edward Island </li>
+				<li><span>QC</span> &mdash; Quebec </li>
+				<li><span>SK</span> &mdash; Saskatchewan </li>
+			</ul>
+		</div>
+			
+
+
+		<h3>Other Locations</h3>
+
+		<div>
+			<h4>U.S. Call Area 1</h4>
+			<ul>
+				<li><span>CT</span> &mdash; Connecticut </li>
+				<li><span>EMA</span> &mdash; Eastern Massachusetts </li>
+				<li><span>ME</span> &mdash; Maine </li>
+				<li><span>NH</span> &mdash; New Hampshire </li>
+				<li><span>RI</span> &mdash; Rhode Island </li>
+				<li><span>VT</span> &mdash; Vermont </li>
+				<li><span>WMA</span> &mdash; Western Massachusetts </li>
+			</ul>
+		</div>
+
+		<div>
+			<h4>U.S. Call Area 2</h4>
+			<ul>
+				<li><span>ENY</span> &mdash; Eastern New York </li>
+				<li><span>NLI</span> &mdash; New York City-Long Island </li>
+				<li><span>NNJ</span> &mdash; Northern New Jersey </li>
+				<li><span>NNY</span> &mdash; Northern New York </li>
+				<li><span>SNJ</span> &mdash; Southern New Jersey </li>
+				<li><span>WNY</span> &mdash; Western New York </li>
+			</ul>
+		</div>
+
+		<div>
+			<h4>U.S. Call Area 3</h4>
+			<ul>
+				<li><span>DE</span> &mdash; Delaware </li>
+				<li><span>EPA</span> &mdash; Eastern Pennsylvania </li>
+				<li><span>MDC</span> &mdash; Maryland-DC </li>
+				<li><span>WPA</span> &mdash; Western Pennsylvania </li>
+			</ul>
+		</div>
+
+		<div>
+			<h4>U.S. Call Area 4</h4>
+			<ul>
+				<li><span>AL</span> &mdash; Alabama </li>
+				<li><span>GA</span> &mdash; Georgia </li>
+				<li><span>KY</span> &mdash; Kentucky </li>
+				<li><span>NC</span> &mdash; North Carolina </li>
+				<li><span>NFL</span> &mdash; Northern Florida </li>
+				<li><span>PR</span> &mdash; Puerto Rico </li>
+				<li><span>SC</span> &mdash; South Carolina </li>
+				<li><span>SFL</span> &mdash; Southern Florida </li>
+				<li><span>TN</span> &mdash; Tennessee </li>
+				<li><span>VA</span> &mdash; Virginia </li>
+				<li><span>VI</span> &mdash; US Virgin Islands </li>
+				<li><span>WCF</span> &mdash; West Central Florida </li>
+			</ul>
+		</div>
+
+		<div>
+			<h4>U.S. Call Area 5</h4>
+			<ul>
+				<li><span>AR</span> &mdash; Arkansas </li>
+				<li><span>LA</span> &mdash; Louisiana </li>
+				<li><span>MS</span> &mdash; Mississippi </li>
+				<li><span>NM</span> &mdash; New Mexico </li>
+				<li><span>NTX</span> &mdash; North Texas </li>
+				<li><span>OK</span> &mdash; Oklahoma </li>
+				<li><span>STX</span> &mdash; South Texas </li>
+				<li><span>WTX</span> &mdash; West Texas </li>
+			</ul>
+		</div>
+
+		<div>
+			<h4>U.S. Call Area 8</h4>
+			<ul>
+				<li><span>MI</span> &mdash; Michigan </li>
+				<li><span>OH</span> &mdash; Ohio </li>
+				<li><span>WV</span> &mdash; West Virginia </li>
+			</ul>
+		</div>
+
+		<div>
+			<h4>U.S. Call Area 9</h4>
+			<ul>
+				<li><span>IL</span> &mdash; Illinois </li>
+				<li><span>IN</span> &mdash; Indiana </li>
+				<li><span>WI</span> &mdash; Wisconsin </li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div id="weare">
+		N9MII is 2A-WWA
+		<button id="clear">Clear</button>
+	</div>
+
+	<script src="classcalc.js"></script>	
+</body>
+</html>

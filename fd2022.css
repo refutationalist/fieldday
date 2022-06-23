@@ -1,0 +1,208 @@
+body {
+	margin: 0;
+	background-color: black;
+	color: white;
+	font-family: sans-serif;
+}
+
+/* class and selection calculator */
+
+#display {
+	height: 9vh;
+	width: 75vw;
+	position: fixed;
+	right: 0;
+	top: 0;
+	display: grid;
+	grid-template-columns: 60vw 15vw;
+	border-bottom: 1px solid #444;
+	padding-bottom: 1vh;
+}
+#tocopy {
+	background: none;
+	color: white;
+	height: 95%;
+	line-height: 9vmin;
+	font-size: 7vmin;
+	text-align: center;
+}
+#cpy, #clear {
+	background: #2c2c2c;
+	color: white;
+	border: 1px solid #7f7f7f;
+	font-size: 5vmin;
+	line-height: 95%;
+	display: block;
+	float: right;
+	border-radius: 9%;
+}
+
+#parts {
+	position: fixed;
+	top: 0;
+	left: 0;
+	border-bottom: 1px solid #444;
+	border-right: 1px solid #444;
+	width: 25vw;
+	height: 9vh;
+	padding-bottom: 1vh;
+}
+#parts > div {
+	color: yellow;
+	text-align: center;
+	height: 4.5vh;
+	line-height: 4.5vh;
+	font-size: 3vmin;
+	cursor: pointer;
+	border-radius: 3vmin;
+}
+#parts > div.active {
+	background-color: #1a1a1a;
+}
+
+div#xandc, div#section {
+	display: none;
+}
+
+body > div.active {
+	display: block;
+	position: fixed;
+	top: 10.5vh;
+	width: 100%;
+	overflow: auto;
+	bottom: 5.5vh
+}
+
+div#xandc.active {
+	display: grid;
+	grid-template-columns: 20% 65%;
+	gap: 0% 5%;
+	grid-auto-flow: row;
+	padding-left: 5%;
+}
+div#xandc ul, div#section ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+div#xandc ul > li, div#section ul > li {
+	background: #2b2b2b;
+	border-radius: 2vmin;
+	cursor: pointer;
+}
+div#classbox li, div#section li {
+	margin: 4% 8%;
+	padding: 3%;
+}
+li span {
+	font-weight: bold;
+	color: yellow;
+}
+
+div#xandc.active div#xmtrbox ul {
+	display: grid;
+	grid-template-columns: 30% 30% 30%;
+	grid-auto-rows: 5vh;
+	gap: 3% 1vh;
+}
+div#xmtrbox li {
+	text-align: center;
+	line-height: 5vh;
+	font-size: 3vmin;
+}
+
+div#xmtrbox input {
+	margin: 1vh auto;
+	height: 3vh;
+	line-height: 3vh;
+	font-size: 2vmin;
+	width: 100%;
+	text-align: center;
+}
+
+div#xandc h4 {
+	text-align: center;
+	font-size: 2vmin;
+	margin: .5vmin;
+}
+
+div#section.active {
+	display: grid;
+	padding-left: 4%;
+	grid-template-columns: 44% 44%;
+	gap: 1vh 4%;
+}
+
+div#section h3 {
+	grid-column: 1 / span 2;
+	margin: 1vh auto;
+	text-align: center;
+	border-bottom: 1px solid #444;
+	font-size: 3vmin;
+}
+
+div#section h4 {
+	text-align: center;
+}
+
+	
+
+#weare {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	height: 5vh;
+	line-height: 5vh;
+	font-size: 6vmin;
+	color: #6b6b6b;
+}
+
+/* index stuff */
+
+body.index {
+	margin: 2vh 4vw;
+	font-size: 3vmin;
+}
+
+body.index > div {
+
+	margin-bottom: 20vh;
+	border-bottom: 1px dotted #444;
+
+
+}
+
+a, a:visited {
+	color: yellow;
+}
+
+table, tr, td, th {
+	border-collapse: collapse;
+	border: 1px solid #444;
+}
+td {
+	padding: 1vmin;
+}
+
+#phonetic ul {
+	list-style: none;
+	width: 40vw;
+	margin: 0 0 0 26vw;
+	padding: 0;
+	
+	
+}
+
+#phonetic li {
+	border-bottom: 1px solid #444;
+	margin: 0;
+	padding: 1vh 5vw;
+}
+
+#phonetic li span {
+	display: inline-block;
+	width: 4vw;
+
+}
