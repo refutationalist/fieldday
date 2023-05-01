@@ -1,2 +1,4 @@
 dxlog
 dxlog/*
+logger/sql/callimport/us/*
+logger/sql/callimport/ca/*
