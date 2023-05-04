@@ -1,4 +1,2 @@
-dxlog
-dxlog/*
-logger/sql/callimport/fcc/*
-logger/sql/callimport/ca/*
+sql/callimport/fcc/*
+sql/callimport/ca/*
