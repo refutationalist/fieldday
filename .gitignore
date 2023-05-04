@@ -1,2 +1,4 @@
-sql/callimport/fcc/*
-sql/callimport/ca/*
+sql/callbook/fcc/*
+sql/data.sql
+sql/callbook/ca/*
+test.ini
