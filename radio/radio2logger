@@ -1,0 +1,147 @@
+#!/usr/bin/php
+<?php
+
+/*
+ * -m 1041 -r /dev/ttyUSB0 -s 38400
+ *
+ * OR
+ *
+ * -d localhost
+ *
+ * OTHER
+ *
+ * -w (seconds) -u "http://url" -n "name" -u (send unknown modulation)
+ */
+
+
+$options = @getopt("n:u:m:r:s:d:w:Nv");
+
+if (!isset($options["n"])) bomb("no name");
+$name = $options["n"];
+
+
+if (!isset($options["u"])) bomb("no logger url");
+$url = $options["u"];
+
+
+if (@isset($options["m"])) {
+
+	if (!isset($options["r"]) || !isset($options["s"]))
+		bomb("no serial or baud");
+
+	$rigctl_opts = sprintf(
+		"-m %d -r %s -s %d",
+		(int) $options["m"],
+		escapeshellarg($options["r"]),
+		(int) $options["s"]
+	);
+
+} else if (@isset($options["d"])) {
+
+	$rigctl_opts = sprintf(
+		"-m 2 -r %s",
+		escapeshellarg($options["d"])
+	);
+
+} else {
+	bomb("no daemon or direct connect defined\n");
+}
+
+
+$wait = (isset($options["w"])) ? intval($options["w"]) : 20;
+if ($wait == 0) bomb("invalid wait time");
+
+$do_mode = !isset($options["N"]);
+
+$debug = isset($options["v"]);
+
+$rigctl_cmd = "rigctl $rigctl_opts f m";
+debug("RIGCTL CMD: $rigctl_cmd");
+
+## okay, watching starts here
+
+$change = false;
+
+do {
+
+	exec($rigctl_cmd, $rigctl, $e);
+	if ($e != 0) bomb("rigctl exec failed");
+
+	$freq = intval($rigctl[0]);
+	if ($freq == 0) bomb("frequency unreadable");
+
+	if ($do_mode) {
+		$mode = $rigctl[1];
+		debug("preparse mode: $mode");
+		if (!in_array($mode, ['CW', 'AM', 'USB', 'LSB', 'FM'])) {
+
+			switch ($mode) {
+
+				case "CWR":
+					$mode = "CW";
+					break;
+
+				case "PKTUSB":
+				case "PKTLSB":
+					$mode = "DIG";
+					break;
+
+				case "WFM":
+					$mode = "FM";
+					break;
+
+				case "RTTYR":
+					$mode = "RTTY";
+					break;
+
+
+				default:
+					$mode = "UNK";
+					break;
+			}
+
+		}	
+
+	} else {
+		$mode = "UNK";
+	}
+
+
+	$get = sprintf(
+		"%s/api?a=radio&name=%s&freq=%d&mode=%s",
+		$url,
+		urlencode($name),
+		$freq,
+		urlencode($mode)
+	);
+
+	debug("URL: $get");
+
+	$output = trim(file_get_contents($get));
+
+	if (intval($output) != 1) {
+		debug("RESULTS: $output");
+		bomb("bad results from server");
+	}
+
+	if ($change != $freq.$mode) {
+		printf(
+			"Radio [%s]: freq(%d) mode(%s)\n",
+			$name, $freq, $mode
+		);
+		$change = $freq.$mode;
+	}
+
+
+	sleep($wait);
+} while(true);
+
+
+function bomb(string $str, int $exit = 1) {
+	echo "radio2logger: $str\n";
+	exit($exit);
+}
+
+function debug(string $str) {
+	echo "## $str\n";
+}
