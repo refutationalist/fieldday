@@ -54,4 +54,4 @@ This is designed for local use only.  In our use case, we have a single wifi rou
 
 This code is AGPL3.  I'll get to adding appropriate headers later.
 
-The font I'm using is (RedHat Mono)[https://github.com/RedHatOfficial/RedHatFont], which is distributed via the OFL.
+The font I'm using is [RedHat Mono](https://github.com/RedHatOfficial/RedHatFont), which is distributed via the OFL.
