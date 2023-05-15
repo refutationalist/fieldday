@@ -44,6 +44,12 @@ Yeah, I'll probably get to that after FD.   I'm pushing to get this code done be
   * WSJT-X import
   * testing
 
+## Security?
+
+Nope.
+
+This is designed for local use only.  In our use case, we have a single wifi router that only the computers that are working Field Day are allowed to join.
+
 ## License
 
 This code is AGPL3.  I'll get to adding appropriate headers later.
