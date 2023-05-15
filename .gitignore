@@ -1,4 +1,5 @@
 sql/callbook/fcc/*
 sql/data.sql
 sql/callbook/ca/*
+logger/test/*.json
 test.ini
