@@ -43,3 +43,9 @@ Yeah, I'll probably get to that after FD.   I'm pushing to get this code done be
 
   * WSJT-X import
   * testing
+
+## License
+
+This code is AGPL3.  I'll get to adding appropriate headers later.
+
+The font I'm using is (RedHat Mono)[https://github.com/RedHatOfficial/RedHatFont], which is distributed via the OFL.
