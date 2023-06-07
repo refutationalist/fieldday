@@ -16,7 +16,7 @@ if (!isset($options["u"])) bomb("no logger url");
 $url = $options["u"];
 debug("url: $url");
 
-if (isset($options["d"])) list($host, $port) = explode(":", $options["d"]);
+if (@isset($options["d"])) list($host, $port) = explode(":", $options["d"]);
 if (@!$host) $host = "localhost";
 if (@!$port) $port = 4532;
 debug("host: $host / port: $port");

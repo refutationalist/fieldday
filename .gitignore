@@ -3,3 +3,7 @@ sql/data.sql
 sql/callbook/ca/*
 logger/test/*.json
 test.ini
+loggerlink/loggerlink.phar
+loggerlink/archlinux/src
+loggerlink/archlinux/pkg
+loggerlink/archlinux/*pkg.tar*
