@@ -7,3 +7,7 @@ loggerlink/loggerlink.phar
 loggerlink/archlinux/src
 loggerlink/archlinux/pkg
 loggerlink/archlinux/*pkg.tar*
+loggerlink/loggerscripts/archlinux/src
+loggerlink/loggerscripts/archlinux/pkg
+loggerlink/loggerscripts/archlinux/*pkg.tar*
+
