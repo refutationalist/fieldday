@@ -61,5 +61,8 @@ body > div > a.back  {
 	width: 20vmin;
 	height: 20vmin;
 	margin: 1vh auto;
+	background-color: white;
+	border-radius: 20vmin;
+	padding: 2vmin;
 
 }
